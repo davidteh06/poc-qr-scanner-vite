@@ -5,12 +5,27 @@ import QRScanner from "./page/QRScanner";
 function App() {
   const [showScanner, setShowScanner] = useState(false);
   const [resultMessage, setResultMessage] = useState("");
-
+  const [phone, setPhone] = useState("");
+  const [amount, setAmount] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    const phoneRegex = /^(01[0-9]{1})[0-9]{7,8}$/;
+    if (!phoneRegex.test(phone)) {
+      setResultMessage("Please enter a valid Malaysian phone number.");
+      return;
+    }
+
+    const amountNumber = parseFloat(amount);
+    if (isNaN(amountNumber) || amountNumber <= 0) {
+      setResultMessage("Please enter a valid amount greater than 0.");
+      return;
+    }
+
     setShowScanner(true);
     setResultMessage("");
   };
+
   const handleScanSuccess = () => {
     setResultMessage("Success! QR code matched.");
     setShowScanner(false);
@@ -26,12 +41,24 @@ function App() {
       {!showScanner ? (
         <form onSubmit={handleSubmit}>
           <label htmlFor="phone">Phone Number:</label>
-          <input type="text" id="phone" required />
-
+          <input
+            type="text"
+            id="phone"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            required
+          />
           <label htmlFor="amount">Amount Spent:</label>
-          <input type="number" id="amount" required />
-
+          <input
+            type="number"
+            id="amount"
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
+            required
+          />
           <button type="submit">Submit</button>
+          {resultMessage && <p>{resultMessage}</p>}{" "}
+          {/* Display validation messages */}
         </form>
       ) : (
         <div>
@@ -41,6 +68,7 @@ function App() {
             onScanFailure={handleScanFailure}
           />
           <p>{resultMessage}</p>
+          <button onClick={() => setShowScanner(false)}>Back</button>
         </div>
       )}
     </div>
