@@ -75,3 +75,7 @@ For testing purposes, you can use the following sample QR codes:
 
 - **Data:** `5678`
 - This QR code can be scanned to simulate a wrong scan.
+
+## Live Demo
+
+You can access the live demo of the application [here](https://davidteh06.github.io/poc-qr-scanner-vite).
