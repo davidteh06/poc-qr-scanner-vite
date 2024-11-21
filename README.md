@@ -64,8 +64,6 @@ For testing purposes, you can use the following sample QR codes:
 
 #### Successful Scan
 
-#### Successful Scan
-
 <img src="./src/assets/qr-1234.png" alt="Sample QR Code (1234)" width="150" />
 
 - **Data:** `1234`
