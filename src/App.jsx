@@ -28,7 +28,7 @@ function App() {
   };
 
   const handleScanSuccess = () => {
-    setResultMessage("Success! QR code matched.");
+    setResultMessage("Success! You've earned your points!");
     setShowScanner(false);
   };
 

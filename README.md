@@ -1,8 +1,59 @@
-# React + Vite
+# Spend & Earn QR Code Scanner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+The Spend & Earn application allows users to input their spending amounts and scan QR codes to earn points. This React-based application, built with Vite, provides an intuitive interface for managing user inputs and scanning QR codes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- Input fields for phone number and amount spent
+- Validation for Malaysian phone numbers
+- Validation for spending amounts (must be greater than 0)
+- QR code scanning functionality
+- Feedback messages for successful scans and validation errors
+- Conditional rendering for a seamless user experience
+
+## Technologies Used
+
+- React
+- Vite for development and build
+- CSS for styling
+- @yudiel/react-qr-scanner for QR code scanning
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have Node.js and npm installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/davidteh06/poc-qr-scanner-vite.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd poc-qr-scanner-vite
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the Application
+
+To start the application, run:
+
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5173` (or the port specified in your Vite configuration).
+
+## Usage
+
+1. Enter your Malaysian phone number and the amount you spent.
+2. Click "Submit" to proceed to the QR code scanning interface.
+3. Scan the QR code to earn points.
+4. You will receive feedback on the success or failure of the scan.
