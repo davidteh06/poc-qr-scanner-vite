@@ -7,6 +7,7 @@ function App() {
   const [resultMessage, setResultMessage] = useState("");
   const [phone, setPhone] = useState("");
   const [amount, setAmount] = useState("");
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -37,7 +38,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>QR Code Scanner POC</h1>
+      <h1>Spend & Earn</h1>
       {!showScanner ? (
         <form onSubmit={handleSubmit}>
           <label htmlFor="phone">Phone Number:</label>
@@ -46,6 +47,7 @@ function App() {
             id="phone"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
+            placeholder="e.g. 0123456789" // Placeholder for phone number
             required
           />
           <label htmlFor="amount">Amount Spent:</label>
@@ -54,6 +56,7 @@ function App() {
             id="amount"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
+            placeholder="e.g. 100" // Placeholder for amount
             required
           />
           <button type="submit">Submit</button>
