@@ -64,14 +64,16 @@ For testing purposes, you can use the following sample QR codes:
 
 #### Successful Scan
 
-![Sample QR Code (1234)](./src/assets/qr-1234.png)
+#### Successful Scan
+
+<img src="./src/assets/qr-1234.png" alt="Sample QR Code (1234)" width="150" />
 
 - **Data:** `1234`
 - This QR code can be scanned to simulate a successful scan.
 
 #### Wrong Scan
 
-![Sample QR Code (5678)](./src/assets/qr-5678.png)
+<img src="./src/assets/qr-5678.png" alt="Sample QR Code (5678)" width="150" />
 
 - **Data:** `5678`
 - This QR code can be scanned to simulate a wrong scan.
