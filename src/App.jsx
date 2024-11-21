@@ -47,7 +47,7 @@ function App() {
             id="phone"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-            placeholder="e.g. 0123456789" // Placeholder for phone number
+            placeholder="e.g. 0123456789"
             required
           />
           <label htmlFor="amount">Amount Spent:</label>
@@ -56,12 +56,11 @@ function App() {
             id="amount"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
-            placeholder="e.g. 100" // Placeholder for amount
+            placeholder="e.g. 100"
             required
           />
           <button type="submit">Submit</button>
           {resultMessage && <p>{resultMessage}</p>}{" "}
-          {/* Display validation messages */}
         </form>
       ) : (
         <div>

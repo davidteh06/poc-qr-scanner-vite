@@ -19,7 +19,6 @@ const QrScanner = ({ onScanSuccess, onScanFailure }) => {
   );
 };
 
-// Add PropTypes validation
 QrScanner.propTypes = {
   onScanSuccess: PropTypes.func.isRequired,
   onScanFailure: PropTypes.func.isRequired,
