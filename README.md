@@ -57,3 +57,21 @@ The application will be available at `http://localhost:5173` (or the port specif
 2. Click "Submit" to proceed to the QR code scanning interface.
 3. Scan the QR code to earn points.
 4. You will receive feedback on the success or failure of the scan.
+
+### Sample QR Codes
+
+For testing purposes, you can use the following sample QR codes:
+
+#### Successful Scan
+
+![Sample QR Code (1234)](./src/assets/qr-1234.png)
+
+- **Data:** `1234`
+- This QR code can be scanned to simulate a successful scan.
+
+#### Wrong Scan
+
+![Sample QR Code (5678)](./src/assets/qr-5678.png)
+
+- **Data:** `5678`
+- This QR code can be scanned to simulate a wrong scan.
